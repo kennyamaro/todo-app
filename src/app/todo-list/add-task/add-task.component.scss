@@ -1,0 +1,39 @@
+// styles.scss
+
+@use '../../../styles';
+@use '../tasks/tasks.component';
+@use '../../app.component';
+
+$component: 'add-tasks';
+
+.container {
+    @include app.theme-colors($component);
+    .task-input {
+        border-radius: 5px;
+        border-bottom: none;
+        margin: 0;
+    
+        div.task-item {
+            border-bottom: none;
+            padding: 0;
+            @extend %task-item;
+            span.task-check-mark {
+                margin-left: 24px;
+            }
+            input.task-item-text {
+                width: 100%;
+                height: 100%;
+                padding: 24px 24px 24px 0;
+                border: none;
+                font: 400 18px styles.$font-stack;
+                border-radius: 5px;
+            }
+            input.task-item-text:focus {
+                border: none;
+                outline: none;
+            }
+        }    
+    }
+}
+
+

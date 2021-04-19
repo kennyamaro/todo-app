@@ -34,6 +34,7 @@ $very-dark-grayish-blue: hsl(237, 14%, 26%);
 $font-stack:    'Josefin Sans', sans-serif;
 // - Weights: 400, 700
 
+$dark-theme: true;
 
 html {
     width: 100%;
@@ -43,6 +44,10 @@ body {
     font-size: 18px;
     width: 100%;
 }
-body.dark-theme {
-    background-color: $very-dark-blue;
+@if $dark-theme {
+    body.dark-theme {
+        background-color: $very-dark-blue;
+    }
 }
+
+

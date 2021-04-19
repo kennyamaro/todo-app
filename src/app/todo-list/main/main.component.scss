@@ -1,0 +1,29 @@
+@use '../../../styles';
+@use '../../app.component';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+$component: 'main';
+
+div.main {
+    @include app.theme-colors($component);
+    .todo-container {
+        font-family: styles.$font-stack;
+        @media (max-width: styles.$layout-mobile) {
+            padding: 80px 24px 0 24px;
+            width: auto;
+        }
+        text-align: center;
+        margin: 0 auto;
+        width: 540px;
+        padding: 80px 24px 0 24px;
+        h1 {
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 20px;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+    }
+}
+
