@@ -41,7 +41,7 @@ div.main {
                 }
             }
         }
-        dd.task-item, dt.task-item {
+        dd.task-item, div.task-item {
             margin: 0;
             display: flex;
             align-items: center;
@@ -64,6 +64,9 @@ div.main {
                     margin-left: 1px;
                 }
             }
+        }
+        div.task-item {
+            padding: 0;
         }
         .tasks-list {
             border-radius: 5px;
@@ -88,13 +91,24 @@ div.main {
             }
         }
         .task-input {
-            display: flex;
-            align-items: center;
             border-radius: 5px;
-            dl {
-                margin: 0;
-                dt.task-item {
-                    border-bottom: none;
+            border-bottom: none;
+            margin: 0;
+            div.task-item {
+                border-bottom: none;
+                span.task-check-mark {
+                    margin-left: 24px;
+                }
+                input.task-item-text {
+                    width: 100%;
+                    height: 100%;
+                    padding: 24px 24px 24px 0;
+                    border: none;
+                    font: 400 18px styles.$font-stack;
+                }
+                input.task-item-text:focus {
+                    border: none;
+                    outline: none;
                 }
             }
         }
@@ -116,12 +130,20 @@ div.main {
     .tasks-list, .task-input, .mobile.task-item {
         background-color: styles.$very-dark-desaturated-blue;
     }
+    .task-input {
+        div.task-item {
+            input.task-item-text {
+                background-color: styles.$very-dark-desaturated-blue;
+                color: styles.$light-grayish-blue;
+            }
+        }
+    }
     .task-item {
-        color: white;
+        color: styles.$light-grayish-blue;
         border-bottom: 2px solid styles.$very-dark-grayish-blue;
     }
     
-    dd.task-item, dt.task-item {
+    dd.task-item, div.task-item {
         span.task-check-mark {
             background-color: styles.$very-dark-grayish-blue;
             .cm-inner {
