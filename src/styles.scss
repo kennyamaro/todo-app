@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+// _base.scss
+
+//Layout breakpoints
+
+$layout-mobile: 800px;
+$layout-desktop: 1440px;
+
+//  Primary
+
+$bright-blue: hsl(220, 98%, 61%);
+$check-background: linear-gradient(hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+
+// Light Theme
+
+$very-light-gray: hsl(0, 0%, 98%);
+$very-light-grayish-blue: hsl(236, 33%, 92%);
+$light-grayish-blue: hsl(233, 11%, 84%);
+$dark-grayish-blue: hsl(236, 9%, 61%);
+$very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+// Dark Theme
+
+$very-dark-blue: hsl(235, 21%, 11%);
+$very-dark-desaturated-blue: hsl(235, 24%, 19%);
+$light-grayish-blue: hsl(234, 39%, 85%);
+$light-grayish-blue-hover: hsl(236, 33%, 92%);
+$dark-grayish-blue: hsl(234, 11%, 52%);
+$very-dark-grayish-blue: hsl(233, 14%, 35%);
+$very-dark-grayish-blue: hsl(237, 14%, 26%);
+
+// Typography
+
+$font-stack:    'Josefin Sans', sans-serif;
+// - Weights: 400, 700
+
+
+html {
+    width: 100%;
+}
+body {
+    margin: 0;
+    font-size: 18px;
+    width: 100%;
+}
+body.dark-theme {
+    background-color: $very-dark-blue;
+}
